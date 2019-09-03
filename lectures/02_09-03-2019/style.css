@@ -1,0 +1,25 @@
+/* Lecture 02 | 09-03-2019 */
+
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i&display=swap');
+
+body {
+    font-family: arvo, sans-serif;
+    font-size: 24px;
+}
+
+h1 {
+    color: rgb(80, 0, 220);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+img {
+    width: 50%;
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    line-height: 1.5rem;
+}
+
+html {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */
+    background: #cedce7; /* Old browsers */
+    background: -moz-linear-gradient(top, #cedce7 0%, #596a72 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cedce7 0%,#596a72 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(top bottom, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background: url(../five.png);
+    background-repeat: no-repeat;
+}
+
+nav {
+    height: 61px;
+    line-height: 61px;
+    margin-left: 25vw;
+    background-color: #cedce7;
+}
+
+nav a {
+    padding: 0 1rem;
+    color: rgb(30, 90, 180, 180);
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background-color: white;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.text-container {
+    margin: 12.5vh 12.5vw;
+}
+
+.text-container h1 {
+    text-shadow: 1px 1px 0px #fff;
+    color: #666;
+}
+
+.text-container h2, p, code, div {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+}
+
+.button-container .next-button {
+    float: right;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem;
+    background-color: white;
+    transition: 0.2s;
+}
+
+button a {
+    color: black;
+}
+
+button:hover {
+    background-color: rgb(30, 90, 180, 180);
+}
+
+button:hover a {
+    color: white;
+}

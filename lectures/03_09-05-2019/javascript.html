@@ -1,0 +1,42 @@
+<!-- Lecture 03 | 09-05-2019 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lecture 02 | 09-03-2019 </title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" class="nav-link">HTML</a>
+            <a href="css.html" class="nav-link">CSS</a>
+            <a class="current-page" href="javascript.html" class="nav-link">JavaScript</a>
+            <a href="flash.html" class="nav-link">Flash</a>
+            <a href="php.html" class="nav-link">PHP</a>
+        </nav>
+        <div class="text-container">
+            <h1>Technologies behind the Web</h1>
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript is a client-side programming language (this means it runs in the browser, not on the server) used to make elements react to user input (such as a click) or events (such as the page loading, or the browser resizing).            </p>
+            <code class="code">
+                $(document).ready(function(){</br>
+                    $('.slideshowFull').cycle({<br/>
+                        fx: 'fade',<br/>
+                        speed: 800,<br/>
+                        timeout: 7000<br/>
+                    });<br/>
+                });
+            </code>
+            <p>
+                    When you see something move on a website (including fading in or out) it's almost always done with either JavaScript or Flash.            <div class="button-container">
+                <button class="nav-button previous-button">
+                    <a href="css.html" class="nav-link previous-link">&larr; Previous</a>
+                </button>
+                <button class="nav-button next-button">
+                    <a href="flash.html" class="nav-link next-link">Next &rarr;</a>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

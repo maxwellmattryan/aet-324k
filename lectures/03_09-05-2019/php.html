@@ -1,0 +1,49 @@
+<!-- Lecture 03 | 09-05-2019 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lecture 02 | 09-03-2019 </title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" class="nav-link">HTML</a>
+            <a href="css.html" class="nav-link">CSS</a>
+            <a href="javascript.html" class="nav-link">JavaScript</a>
+            <a href="flash.html" class="nav-link">Flash</a>
+            <a class="current-page" href="php.html" class="nav-link">PHP</a>
+        </nav>
+        <div class="text-container">
+            <h1>Technologies behind the Web</h1>
+            <h2>PHP</h2>
+            <p>
+                PHP HyperText Preprocessor is a scripting language that runs on a server. This language is the most common way data is moved between a web application (front end) and the server (back-end). Common examples include:
+            </p>
+            <ul>
+                <li>checking the validity of a password</li>
+                <li>emailing the contents of a contact form to a recipient</li>
+                <li>adding information entered on a web form to a database</li>
+                <li>assembling a web page based on user input</li>
+            </ul>
+            <code>
+                    &lt;?php
+                    if ($_POST['sendRequest']) {<br/>
+                     $sendTo = $_POST['destinationEmail'];<br/>
+                     $subject = "Web inquiry";<br/>
+                     $message = $_POST['emailInquiry'];<br/>
+                     mail($sendTo, $subject, $message);<br/>
+                    }<br/>
+                    ?&gt;
+            </code>
+            <p>
+                PHP drives most content management systems (like Drupal and WordPress). When you search for a book on Amazon.com, you don't land on an HTML page someone has created for that book; PHP pulls data from Amazon's database and arranges it in an HTML template.
+            </p>
+            <div class="button-container">
+                <button class="nav-button previous-button">
+                    <a href="flash.html" class="nav-link previous-link">&larr; Previous</a>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

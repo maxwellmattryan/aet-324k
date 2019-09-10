@@ -18,19 +18,22 @@ html {
 }
 
 html, body {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100vw;
+    min-width: 840px;
 }
 
 body {
-    background: url(../five.png);
-    background-repeat: no-repeat;
+    background: url(../five.png) no-repeat, url(../circuitry.png) no-repeat right top;
+
 }
 
 nav {
     height: 61px;
     line-height: 61px;
-    margin-left: 25vw;
+    margin-left: 235px;
+    display: inline-block;
     background-color: #cedce7;
 }
 
@@ -38,9 +41,12 @@ nav a {
     padding: 0 1rem;
     color: rgb(30, 90, 180, 180);
     transition: 0.2s;
+    display: inline-block;
+    line-height: 61px;
+    text-decoration: none;
 }
 
-nav a:hover {
+nav a:hover, .current-page {
     background-color: white;
 }
 
@@ -49,17 +55,29 @@ nav a:hover {
 }
 
 .text-container {
+    font-size: 125%;
     margin: 12.5vh 12.5vw;
 }
 
 .text-container h1 {
     text-shadow: 1px 1px 0px #fff;
     color: #666;
+    font-size: 1.5rem;
 }
 
-.text-container h2, p, code, div {
-    font-size: 1rem;
-    margin: 1rem 2rem;
+.text-container h2, p, code, div, ul {
+    font-size: 1.2rem;
+    margin: 1rem 0 1rem 2.5rem;
+}
+
+code {
+    color: white;
+    text-shadow: 5px 2px 7px #202020;
+    display: block;
+}
+
+li {
+    margin-left: 2rem;
 }
 
 .button-container .next-button {
@@ -76,6 +94,7 @@ button {
 
 button a {
     color: black;
+    display: inline-block;
 }
 
 button:hover {

@@ -1,0 +1,27 @@
+html, body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 125%;
+    font-family: sans-serif;
+}
+
+header {
+    height: auto;
+    background-image: linear-gradient(#e6b3ff, #c44dff);
+    padding: 10vh 10vw 5vh 10vw;
+}
+
+h1{
+    color: #ffffff;
+    font-size: 200%;
+}
+
+.text-container {
+    padding: 7vh 10vw 2vh 10vw;
+}
+
+h2 {
+    margin-bottom: 5vh;
+}
+

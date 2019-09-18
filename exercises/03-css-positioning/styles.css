@@ -1,0 +1,26 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #202020;
+    display: flex;
+}
+
+img {
+    max-height: 5rem;
+}
+
+h1 {
+    color: #e4e4e4;
+}
+
+main {
+    height: 85vh;
+}

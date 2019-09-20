@@ -8,19 +8,26 @@ html, body {
     font-family: sans-serif;
 }
 
+body {
+    height: 100vh;
+}
+
 header {
     background-color: #202020;
     display: flex;
+    height: 15vh;
 }
 
 img {
     max-height: 5rem;
+    margin: auto 5vw;
 }
 
 h1 {
     color: #e4e4e4;
+    margin: auto 0;
 }
 
-main {
-    height: 85vh;
+p {
+    padding: 10vw;
 }

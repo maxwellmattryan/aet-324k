@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Be+Vietnam:100,300,400,600,800&display=swap');
+
+/* RESET DEFAULTS */
+
+* {
+    border: 0px;
+    font-family: "Be Vietnam", "sans serif";
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+aside {
+    color: #888;
+    font-family: "Indie Flower", "sans serif";
+    grid-area: sidebar;
+    padding: 2rem; 
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 200px 40px 1fr 40px;
+    min-height: 100vh;
+}
+
+body, html {
+    height: 100%;
+}
+
+footer {
+    background-color: #202020;
+    color: #e4e4e4;
+    grid-area: footer;
+    line-height: 40px;
+    padding-left: 300px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+header {
+    background-image: url("./images/fjordland.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: header;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2.75rem;
+    left: 300px;
+    position: relative;
+    text-shadow: 2px 2px 5px #000;
+    top: 60px;
+}
+
+main {
+    grid-area: main;
+    padding: 2rem 2rem 1rem 0rem;
+}
+
+nav {
+    background: linear-gradient(to bottom, #565656 0%,#202020 100%);    
+    grid-area: nav;
+    line-height: 40px;
+    padding-left: calc(300px - 1rem);
+}
+
+nav a {
+    color: #e4e4e4;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 40px;
+    padding: 0rem 1rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: #202020;
+}
+
+/* CLASSES */
+
+.credit {
+    text-align: right;
+}
+
+.quote {
+    background: url("./images/open-quote.png") no-repeat, url("./images/close-quote.png") no-repeat right bottom;
+    border: solid 2px #202020;
+    font-family: "Indie Flower", "sans serif";
+    font-size: 2rem;
+    padding: 0rem 3rem;
+}

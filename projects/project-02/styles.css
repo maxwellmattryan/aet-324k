@@ -6,6 +6,7 @@
     border: 0px;
     font-family: "Be Vietnam", "sans serif";
     margin: 0px;
+    overflow-x: hidden;
     padding: 0px;
     text-decoration: none;
 }
@@ -31,6 +32,16 @@ body {
 
 body, html {
     height: 100%;
+}
+
+figcaption {
+    color: rgb(140, 140, 140);
+    font-size: 90%;
+    margin-bottom: 1rem;
+}
+
+figure {
+    break-inside: avoid;
 }
 
 footer {
@@ -64,6 +75,7 @@ header h1 {
 }
 
 main {
+    column-count: 2;
     grid-area: main;
     padding: 2rem 2rem 1rem 0rem;
 }
@@ -72,11 +84,13 @@ nav {
     background: linear-gradient(to bottom, #565656 0%,#202020 100%);    
     grid-area: nav;
     line-height: 40px;
+    overflow: hidden;
     padding-left: calc(300px - 1rem);
 }
 
 nav a {
     color: #e4e4e4;
+    display: inline-block;
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 40px;
@@ -95,9 +109,18 @@ nav a:hover {
     text-align: right;
 }
 
+.current-page {
+    background: white;
+    color: #202020;
+}
+
+.elastic {
+    max-width: 100%;
+}
+
 .quote {
     background: url("./images/open-quote.png") no-repeat, url("./images/close-quote.png") no-repeat right bottom;
-    border: solid 2px #202020;
+    border: solid 0px #202020;
     font-family: "Indie Flower", "sans serif";
     font-size: 2rem;
     padding: 0rem 3rem;

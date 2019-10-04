@@ -103,6 +103,10 @@ nav a:hover {
     color: #202020;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
 /* CLASSES */
 
 .credit {
@@ -125,3 +129,16 @@ nav a:hover {
     font-size: 2rem;
     padding: 0rem 3rem;
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 830px) {
+    header h1 {
+        left: 1rem;
+    }
+    nav {
+        padding-left: 1rem;
+    }
+}
+
+@media onl

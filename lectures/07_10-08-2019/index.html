@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            background: url("./logo.png") no-repeat center bottom;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 7.5vh 1fr 5vh;
+        }
+        div {
+            background-color: #f81f2a;
+            height: 100px;
+            margin: 20px;
+            width: 120px;
+        }
+        footer, header {
+            background-color: #202020;
+        }
+        main {
+            align-content: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="colored"></div>
+        <div class="colored"></div>
+        <div class="colored"></div>
+        <div class="colored"></div>
+        <div class="colored"></div>
+        <div class="colored"></div>
+    </main>
+    <footer></footer>
+</body>
+</html>

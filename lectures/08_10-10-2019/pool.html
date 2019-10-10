@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        input {
+            display: none;
+        }
+        input:checked ~ h2 {
+            border: solid 2px #666;
+        }
+        label {
+            background: #234;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            height: 50px;
+            margin-top: 30px;
+            width: 100px;
+        }
+        .cue-ball {
+            animation: strike-cue 4.0s ease-out infinite;
+            background-color: #c2c2c2;
+            border-radius: 100%;
+            height: 50px;
+            left: 100px;
+            position: relative;
+            top: 50px;
+            width: 50px;
+        }
+        .eight-ball {
+            animation: strike-eight 3.4s ease-out infinite;
+            animation-delay: 600ms;
+            background-color: #000;
+            border-radius: 100%;
+            height: 50px;
+            left: 25vw;
+            position: relative;
+            top: 11vh;
+            width: 50px;
+        }
+        .pool-table {
+            background-color: rgb(18, 68, 21);
+            border: solid 1.5rem #202020;
+            box-sizing: border-box;
+            height: 50vh;
+            width: 100vw;
+        }
+        @keyframes strike-cue {
+            0% {
+                left: 100px;
+                top: 50px;
+            }
+            100% {
+                left: 70vh;
+                top: 40vw;
+            }
+        }
+        @keyframes strike-eight {
+            0% {
+                top: 11vh;
+            }
+            100% {
+                top: 30vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pool-table">
+        <div class="cue-ball"></div>
+        <div class="eight-ball"></div>
+        <div class="felt"></div>
+    </div>
+    <label>
+        <input type="checkbox" />
+    </label>
+    <h2>Hello!</h2>
+</body>
+</html>

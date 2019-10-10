@@ -6,7 +6,6 @@
     border: 0px;
     font-family: "Be Vietnam", "sans serif";
     margin: 0px;
-    overflow-x: hidden;
     padding: 0px;
     text-decoration: none;
 }
@@ -32,6 +31,7 @@ body {
 
 body, html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 figcaption {
@@ -133,12 +133,41 @@ p {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 830px) {
+    body {
+        grid-template-areas: 
+            "header"
+            "nav"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-columns: auto;
+        grid-template-rows: 200px 40px auto 2fr auto;
+    }
+    figcaption {
+        text-align: center;
+    }
+    figure {
+        text-align: center;
+    }
+    footer {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
     header h1 {
         left: 1rem;
+    }
+    main {
+        padding: 1rem;
+        column-count: 1;
     }
     nav {
         padding-left: 1rem;
     }
+    nav a {
+        font-size: 0.75rem;
+    }
+    #galleria {
+        max-width: 100%;
+    }
 }
-
-@media onl

@@ -15,17 +15,41 @@
         }
 
         /* ELEMENTS */
+        a {
+            text-decoration: none;
+        }
         body {
             background: #202020;
             font-family: arial;
+            font-size: 1.25rem;
+            text-align: center;
         }
         figure {
             background-color: rgb(220, 220, 220);
             border-radius: 5px;
-            margin: 1rem;
-            padding: 1rem;
-            width: 80%;
+            padding: 1.5rem;
+            pointer-events: none;
+            position: absolute;
+            top: 15rem;
+            transition: all 0.5s;
+            transform: scale(0.5);
+            width: 100%;
             opacity: 0;
+        }
+        figure a {
+            color: rgb(73, 73, 73);
+            font-size: 2rem;
+            pointer-events: all;
+            position: absolute;
+            right: 1.5rem;
+            top: 1rem;
+        }
+        figure h1 {
+            margin-bottom: 1rem;
+            text-align:center;
+        }
+        figure p {
+            color: rgb(73, 73, 73);
         }
 
         /* CLASSES */
@@ -34,6 +58,7 @@
             display: inline-block;
             height: 100px;
             margin: 5rem 2rem;
+            justify-self: center;
             width: 100px;
         }
 
@@ -47,32 +72,53 @@
         #venus {
             background: rgb(233, 189, 67);
         }
+        #earth-link:target ~ #earth-data, 
+        #mars-link:target ~ #mars-data, 
+        #venus-link:target ~ #venus-data {
+            opacity: 0.8;
+            transform: scale(1);
+        }
     </style>
 
 </head>
 <body>
-    <main>
+    <a href="#venus-link" id="venus-link" class="planet-link">
         <div id="venus" class="planet"></div>
+    </a>
+    <a href="#earth-link" id="earth-link" class="planet-link">
         <div id="earth" class="planet"></div>
+    </a>
+    <a href="#mars-link" id="mars-link" class="planet-link">
         <div id="mars" class="planet"></div>
-    </main>
+    </a>
 
     <figure id="venus-data">
+        <a href="#"><h2>&times;</h2></a>
         <h1>Venus</h1>
         <p>
-            Venus is the second planet from the sun...
+            Venus spins slowly in the opposite direction from 
+            most planets. A thick atmosphere traps heat in a runaway
+            greenhouse effect, making it the hottest planet in our
+            solar system.
         </p>
     </figure>
     <figure id="earth-data">
+        <a href="#"><h2>&times;</h2></a>
         <h1>Earth</h1>
         <p>
-            The only known planet to support life, Earth is the third planet from the sun...
+            Earth - our home planet - is the only planet we know of
+            so far that's inhabited by living things. It's also
+            the only planet in our solar system with liquid water
+            on the surface.    
         </p>
     </figure>
     <figure id="mars-data">
+        <a href="#"><h2>&times;</h2></a>
         <h1>Mars</h1>
         <p>
-            Known as the "Red Planet", Mars is the fourth planet from the sun...
+            Mars is a dusty, cold, desert world with a very thin
+            atmosphere. There is strong evidence Mars - billions of
+            years ago - wetter and warmer, with a thicker atmosphere.
         </p>
     </figure>
 </body>

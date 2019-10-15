@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lecture 09 | 10-15-2019</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <style>
+        * {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .expand {
+            background-color: rgb(107, 92, 243);
+            cursor: pointer;
+            height: 20vh;
+            margin-left: -45vh;
+            width: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="expand"></div>
+
+    <script>
+        function expand() {
+            if(1 == 1) {
+                $(".expand").animate({marginLeft: "0vh"}, 300);
+            }
+            else {
+                $(".expand").animate({marginLeft: "-45vh"}, 300);
+            }
+        }
+
+        $(".expand").click(expand);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200,400,600&display=swap');
+
+/* VARIABLES */
+$blue-dark: rgb(57, 172, 225);
+$blue-light: rgb(122, 213, 255);
+$mail-link-purple: rgb(98, 66, 241);
+$mail-link-red: rgb(241, 107, 66);
+$off-white: rgb(240, 240, 240);
+
+/* ELEMENTS */
+* {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+}
+a.active {
+    background: white;
+    border-left: 1px solid black;
+    border-radius: 3px 3px 0px 0px;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    position: relative;
+    top: 1px;
+}
+body {
+    font-family: "Work Sans", sans-serif;
+    font-size: 80%;
+    line-height: 2rem;
+}
+body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+div.active {
+    display: block;
+}
+header {
+    align-items: center;
+    background: $blue-dark;
+    color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    justify-content: space-between;
+    padding: 0.1rem 1rem;
+}
+main {
+    padding: 2rem;
+}
+nav {
+    background: linear-gradient(white, $blue-light);
+    border-bottom: 1px solid black;
+    display: inline-block;
+    height: 5vh;
+    padding: 0rem 1.5rem;
+    width: 100vw;
+}
+object {
+    height: 100%;
+    width: 100%;
+}
+p {
+    padding-top: 2rem;
+}
+
+/* CLASSES */
+.icon {
+    height: 30px;
+    fill: rgb(240, 240, 240);
+    margin-left: 0.7rem;
+    transition: 0.2s;
+}
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    transform: translateY(5px);
+}
+.link-mail {
+    color: $mail-link-red;
+    text-decoration: none;
+}
+.link-nav {
+    line-height: 5vh;
+    padding: calc(5vh - 25.6px) 0.5rem;
+}
+.panel {
+    display: none;
+    height: 1200px;
+    padding: 2rem;
+}
+.thin {
+    display: none;
+}
+
+/* MEDIA QUEUERIES */
+@media only screen and (min-width: 450px) {
+    header {
+        padding: 0rem 2rem;
+    }
+    main {
+        padding: 2rem;
+    }
+    nav {
+        padding: 0rem 2rem;
+    }
+    .icon {
+        height: 35px;
+        fill: rgb(240, 240, 240);
+        margin-left: 0.7rem;
+        transition: 0.2s;
+    }
+    .icon:hover {
+        transform: translateY(-5px);
+    }
+    .link-mail:hover {
+        text-decoration: underline;
+    }
+    .link-nav {
+        padding: calc(5vh - 32px) 1rem;
+    }
+    .panel {
+        padding: 2rem 3rem;
+    }
+}
+@media only screen and (min-width: 719px) {
+    body {
+        font-size: 125%;
+    }
+    .icon {
+        margin-left: 1.5rem;
+    }
+    .link-nav {
+        cursor: pointer;
+        padding: 0.9rem 2rem;
+    }
+    .panel {
+        padding: 2rem 4rem;
+    }
+    .thin {
+        display: inline;
+        font-weight: 400;
+        margin-left: 1.5rem;
+    }
+}

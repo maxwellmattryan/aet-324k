@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <title>Fjordland</title>
+
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="lightbox/js/jquery-1.7.2.min.js"></script>
+        <script src="galleria/galleria-1.2.8.min.js"></script>
+        <script src="galleria/themes/classic/galleria.classic.min.js"></script>
+
+        <style>
+            header {
+                background-image: url("./images/milford-sound.jpg");
+            }
+
+            main {
+                column-count: 1;
+            }
+
+            #galleria {
+                height: 500px;
+                width: 800px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Fjordland</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="bay-of-islands.html">Bay Of Islands</a>
+            <a href="rotorua.html">Rotorua</a>
+            <a class="current-page" href="fjordland.html">Fjordland</a>
+        </nav>
+        <aside>
+            <p class="quote">
+                I've never been to Fjordland,
+                but it seems like a wonderful place to go.
+            </p>
+            <p class="credit">
+                &mdash; Matt Maxwell
+            </p>
+        </aside>
+        <main>
+            <h2>Fjordland</h2>
+            <div id=galleria>
+                <a href="images/milford-sound.jpg">
+                    <img src="images/milford-sound.jpg" alt="Fjordland" />
+                </a>
+                <a href="images/fjordland.jpg">
+                    <img src="images/fjordland.jpg" alt="Fjordland" />
+                </a>
+                <a href="images/waterfall.jpg">
+                    <img src="images/waterfall.jpg" alt="Fjordland" />
+                </a>
+                <a href="images/beach.jpg">
+                    <img src="images/beach.jpg" alt="Fjordland" />
+                </a>
+                <a href="images/hobbiton.jpg">
+                    <img src="images/hobbiton.jpg" alt="Fjordland" />
+                </a>
+                <a href="images/waterfall.jpg">
+                    <img src="images/waterfall.jpg" alt="Fjordland" />
+                </a>
+            </div>
+            <p>
+                Urna cursus eget nunc scelerisque viverra. Non curabitur gravida arcu ac. Purus in massa tempor nec feugiat nisl pretium fusce. Mi eget mauris pharetra et. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Cursus metus aliquam eleifend mi in nulla. Id diam vel quam elementum pulvinar etiam. At varius vel pharetra vel turpis nunc. Tincidunt ornare massa eget egestas purus viverra accumsan in. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. In est ante in nibh mauris. Et tortor consequat id porta. Lobortis elementum nibh tellus molestie nunc non blandit. Iaculis eu non diam phasellus. Ultricies integer quis auctor elit sed. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus. Amet risus nullam eget felis eget nunc. Tristique senectus et netus et malesuada fames ac turpis egestas. Sapien pellentesque habitant morbi tristique. Eget felis eget nunc lobortis mattis aliquam faucibus purus.
+            </p>
+        </main>
+        <footer>
+            <p>
+                &copy; 2019 New Zealand Department of Tourism.
+            </p>
+        </footer>
+
+        <script>
+            Galleria.loadTheme("galleria/themes/classic/galleria.classic.min.js");
+            Galleria.run("#galleria");
+        </script>
+    </body>
+</html>

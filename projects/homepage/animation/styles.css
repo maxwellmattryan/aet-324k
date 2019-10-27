@@ -26,6 +26,7 @@ h2 {
     animation-delay: 3s;
     font-size: 3rem;
     margin-left: -150px;
+    letter-spacing: -1.6rem;
     transform: rotate(10deg);
     white-space: nowrap;
     width: 900px;
@@ -138,11 +139,10 @@ span:nth-child(6) {
 
 @keyframes expand {
     0% {
-        letter-spacing: 0rem;
         opacity: 0;
     }
     100% {
-        letter-spacing: 1.1rem;
+        letter-spacing: 1.25rem;
         opacity: 1;
     }
 }

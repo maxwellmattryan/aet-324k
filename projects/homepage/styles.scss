@@ -36,6 +36,8 @@ body, html {
 }
 div.active {
     display: block;
+    height: 1200px;
+    padding: 2rem;
 }
 header {
     align-items: center;
@@ -84,12 +86,10 @@ p {
 }
 .link-nav {
     line-height: 5vh;
-    padding: calc(5vh - 25.6px) 0.5rem;
+    padding: calc(5vh - 30px) 0.5rem;
 }
 .panel {
     display: none;
-    height: 1200px;
-    padding: 2rem;
 }
 .thin {
     display: none;
@@ -113,6 +113,7 @@ p {
         transition: 0.2s;
     }
     .icon:hover {
+        fill: rgb(255, 255, 255);
         transform: translateY(-5px);
     }
     .link-mail:hover {
@@ -121,7 +122,7 @@ p {
     .link-nav {
         padding: calc(5vh - 32px) 1rem;
     }
-    .panel {
+    div.panel {
         padding: 2rem 3rem;
     }
 }
@@ -134,9 +135,9 @@ p {
     }
     .link-nav {
         cursor: pointer;
-        padding: 0.9rem 2rem;
+        padding: 0.8rem 2rem;
     }
-    .panel {
+    div.active {
         padding: 2rem 4rem;
     }
     .thin {

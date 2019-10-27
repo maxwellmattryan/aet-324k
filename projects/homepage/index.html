@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
+    <title>AET 324K Portfolio</title>
 
     <link rel="stylesheet" href="styles.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -30,7 +30,7 @@
         <script>
             var name = "maxwellmattryan";
             var domain = "gmail";
-            var extension = "com"
+            var extension = "com";
             var all = name + "@" + domain + "." + extension;
             $("#address").html("<a class='link-mail' href='mailto:" + all + "'>" + all + "</a>");
         </script>
@@ -63,38 +63,16 @@
         <a class="link-nav">Module 4</a>
     </nav>
 
-    <div class="active panel"><object type="text/html" data="./new-zealand/index.html"/></div>
-    <div class="panel"></div>
-    <div class="panel"></div>
-    <div class="panel"></div>
+    <div class="panel active"><a target="_blank" href="./tesla/index.html">HTML Email Layout</a></div>
+    <div class="panel"><a target="_blank" href="./new-zealand/index.html">Travel in New Zealand</a></div>
+    <div class="panel"><a target="_blank" href="./animation/index.html">CSS Animation</a></div>
+    <div class="panel"><a href="#">Empty</a></div>
 
     <script>
-        // switch modules and project viewer
         $(".link-nav").click(function() {
-            $("div.active").html("");
             $(".active").removeClass("active");
             $(this).addClass("active");
-            var index = $(this).index() + 1;
-            $(".panel:nth-of-type(" + index + ")").addClass("active");
-            switch(index) {
-                case 1:
-                    $(".panel:nth-of-type(1)").html("<object data='./new-zealand/index.html'/>");
-                    break;
-                case 2:
-                    $(".panel:nth-of-type(2)").html("<object data='./animation/index.html'/>");
-                    break;
-                case 3:
-                    $(".panel:nth-of-type(3)").addClass("active");
-                    $(".panel:nth-of-type(3)").html("Project 03");
-                    break;
-                case 4:
-                    $(".panel:nth-of-type(4)").addClass("active");
-                    $(".panel:nth-of-type(4)").html("Project 04");
-                    break;
-                default:
-                    $(".panel:nth-of-type(1)").html("<object data='http://mattmaxwell.x10host.com/new-zealand/'/>");
-                    break;
-            };
+            $(".panel:nth-of-type(" + ($(this).index() + 1) + ")").addClass("active");
         });
     </script>
 </body>

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
+
+* {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Quicksand", arial, sans-serif;
+    padding: 1rem;
+}
+
+.switch-text {
+    color: rgb(182, 182, 182);
+    font-weight: 600;
+    transform: translateY(-8px);
+}
+
+.black {
+    color: black;
+}
+
+.switch-text, .switch-track {
+    display: inline-block;
+}
+
+.switch-track {
+    background: rgb(198, 198, 198);
+    border: 1px solid #333;
+    border-radius: 100px;
+    box-shadow: 1px 1px 3px #333 inset;
+    cursor: pointer;
+    height: 25px;
+    margin: 0rem 0.5rem;
+    width: 55px;
+}
+
+.switch-toggle {
+    background: linear-gradient(170deg, #555 0%, #999 100%);
+    border: 1px solid #fff;
+    border-radius: 100px;
+    box-shadow: 1px 1px 2px #333;
+    height: 23px;
+    margin-left: 0px;
+    transition: 0.2s;
+    width: 23px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Lecture 11 | Drag and Drop</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <style>
+        #blackhole {
+            background: url("images/blackhole.jpg");
+            height: 400px;
+            position: relative;
+            width: 800px;
+        }
+        #tardis {
+            background: url("images/tardis.png");
+            height: 200px;
+            position: absolute;
+            width: 200px;
+        }
+        #target {
+            background: rgba(120, 255, 180, 0.5);
+            bottom: 90px;
+            height: 100px;
+            position: absolute;
+            right: 200px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="blackhole">
+        <div id="target"></div>
+        <div id="tardis"></div>
+    </div>
+</body>
+</html>

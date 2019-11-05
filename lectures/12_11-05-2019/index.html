@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Lecture 12 | Tesla Car Colors</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <style>
+        * {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background: rgb(226, 226, 226);
+        }
+        li {
+            background-image: url("images/shine.svg");
+            border-radius: 7px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            height: 50px;
+            margin: 0.8rem;
+            width: 50px;
+        }
+        ul {
+            background: linear-gradient(rgb(90, 90, 90) 0%, rgb(48, 48, 48) 100%);
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+            border-radius: 1000px;
+            display: inline-block;
+            padding: 1rem 2rem;
+        }
+
+        .paint{
+            fill: #000;
+            mix-blend-mode: overlay;
+            transition: all 0.5s;
+        }
+
+        #car {
+            background: url("images/model-s.png");
+            height: 357px;
+            width: 900px;
+        }
+        #black {
+            background-color: #000;
+        }
+        #blue {
+            background-color: #3434fc;
+        }
+        #grey {
+            background-color: #6e6e6e;
+        }
+        #orange {
+            background-color: #ff6e1b;
+        }
+        #red {
+            background-color: #ff3939;
+        }
+        #white {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div id="car">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 900 400" style="enable-background:new 0 0 900 400;" xml:space="preserve">
+        <path class="paint" d="M120.8,271.6c-11.1-1.3-14.9-2.1-30.6-4.7s-33.6-7.6-39.6-9.6c-6-2.1-6.2-5.5-6.4-8.9
+            c-0.2-3.4-0.8-6.6-1.9-13.6c-1.1-7-1.3-8.3-2.6-12.2c-1.4-5.1,2.3-14.8,4.8-18.9s3.5-11.3,3.8-18.3s0.1-11.3,1-14.5s1.1-4.5,2.6-3.3
+            s12.4,4.5,17,5.1c4.6,0.7,9,3,10.4,5.9s5.4,11.2,5.4,11.2s5-6.2,6.6-8.8s4.8-3.7,7.9-3.4s34.8,1,49.2,1
+            c-6.2-8.7-36.7-11.6-54.7-13.1s-25-5.5-41.8,0c3.9-5.5,26.2-32.8,62.5-48S238.5,94,258.1,93.2s79.7,0.4,105.5,2s88.6,4.8,104.7,4.3
+            c11-0.5,19.7-2.2,28-6.8c8.3-4.7,40.3-30.3,64.3-48s42.3-17.7,74-19s86.7,16,107.3,26s58.7,37.3,66,44s14.7,12.3,21,13.3
+            s16.7,5,20.7,8s7.7,10,7.7,10s-0.7,3-1.3,8.7c-0.7,5.7-4,4-3.3,10.3s13.7,3.3,13.7,3.3s0,2,0,5.7s-3,9.3-4.3,15s0.7,22.7,1.3,26.7
+            c0.7,4-1.3,15-3.3,20.7s-3.3,16.7-7.3,22s-9.3,11.7-9.3,11.7s6-26.3,5.3-45.7c-0.7-19.3-13-50-37.7-46.3s-41.3,49.3-45.3,71
+            s-6.3,37.7-9.3,37s-16.3,1.3-31.3,3s-252,18-257.3,20s-11.7,2-8.3,0c3.3-2,7.3-6.7,8.3-12s2.5-35.7,3-47.7c0.7-16.7-8-74-55.7-78
+            c-56.9-4.8-80,66.5-80,66.5c-7.3,20.2-8.2,37.9-8.2,50.6c0,12.7,0.2,24.2-1.7,27.4c-1.9,3.2-6.8,3.6-14.5,1.9
+            c-7.7-1.7-22.1-5.5-36.6-7.7s-28.1-4.3-48.3-5.3s-60-4.2-66.5-5.1c-6.4-0.9-14.6-4.9-20.4-6.2C135.4,273.7,131.9,272.9,120.8,271.6z
+                M241.7,149c-37,5-66.7,19-66.7,19s14.7,8.7,21,10.5s46.7-2.8,46.7-2.8l6,5.3c28-0.3,48.3-7,57-12s34.3-25.7,34.3-25.7
+            C319.7,142.7,278.7,144,241.7,149z M468.7,148.3l9,13.8l21.3-15.4L468.7,148.3z M627.1,136.5c0,0,14.5-0.2,19.9-0.8s7.6-2.1,8.9-7.7
+            c0,0-14.3,0.3-20.4,0.8C629.4,129.2,627.1,136.5,627.1,136.5z M752.5,129.4c0,0,15-1.2,19.7-1.5c4.8-0.3,5.1-6.7,5.1-6.7
+            s-13.3,0.8-17.9,1.5C754.8,123.3,753,126.5,752.5,129.4z M782.9,80.1c0,0-38.5-26.1-70.7-35.5S648.9,29.8,619,33.3
+            s-59.2,24.5-69.7,32.9s-36.8,31.6-37.8,35.2s-3.1,9.5-3.1,9.5h37l1,2.6c0,0,93-1.5,120.5-2.1s65.1-2,83.3-6.7
+            c18.2-4.8,28.6-9.7,30.7-15.3C783.1,83.7,782.9,80.1,782.9,80.1z M609.2,91.9c-1.2-2.6-3.1-4.5-8.4-6s-28.4-5.6-34.5-5.4
+            s-9.2,3.1-15.1,8.2c-5.9,5.1-10.5,14.6-10.5,14.6l71-1.8C611.6,101.5,610.3,94.4,609.2,91.9z M291.7,231.5l-41.2,1.7l-2.6,12.8
+            c0,0-64.2,1.7-66.1,1.9c-1.9,0.2-3.4,3.2,1.1,2.8c4.5-0.4,64-1.9,64-1.9l-1.1,7.4c0,0-68.1,1.7-70.8,1.7s-3.2,3.2,0,3
+            c3.2-0.2,69.3-2.3,69.3-2.3s-2.3,12.7-1.7,12.7s24.5,1.7,33.6-6.8C285.2,256.1,287.9,250.8,291.7,231.5z"/>
+        </svg>
+    </div>
+    <ul>
+        <li id="black" data-color="000"></li>
+        <li id="grey" data-color="6e6e6e"></li>
+        <li id="white" data-color="ffffff"></li>
+        <li id="red" data-color="ff3939"></li>
+        <li id="blue" data-color="3434fc"></li>
+        <li id="orange" data-color="ff6e1b"></li>
+    </ul>
+
+    <script>
+        var color = "#000";
+        $("li").draggable({revert: true, revertDuration: 0.1, opacity: 0.75, start: grab});
+        $("#car").droppable({drop: repaint});
+
+        function repaint() {
+            // change color of .paint to match
+            $(".paint").css("fill", color);
+        }
+
+        function grab() {
+            // update color of 
+            color = $(this).data("color");
+        }
+    </script>
+</body>
+</html>

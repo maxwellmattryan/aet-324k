@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Lecture 13 | Skrollr Library (Parallax)</title>
+
+    <link rel="stylesheet" href="style.css"/>
+    <script src="skrollr.js"></script>
+</head>
+<body>
+    <section id="screen-01" class="image-background">
+        <h1 data-start="margin-top: 0px;"
+            data-500-start="margin-top: -200px;">
+            Parallax Effect
+        </h1>
+    </section>
+    <section id="screen-02">
+        <h1 data-bottom-top="transform: scale(1.5);"
+            data-top-bottom="transform: scale(1);">
+            Pretty cool, huh ?
+        </h1>
+    </section>
+    <section id="screen-03" class="image-background">
+        <h1>... yea, i guess.</h1>
+    </section>
+    <section id="screen-04">
+        <h1 data-800-end="margin-left: -1300px;"
+            data-end="margin-left: 1000px;">
+            Bruh, c'mon.
+        </h1>
+    </section>
+
+    <script>
+        var s = skrollr.init();
+    </script>
+</body>
+</html>

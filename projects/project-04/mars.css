@@ -4,8 +4,10 @@
 
 body, html{height:100%;
     font-family: 'Oswald', sans-serif; 
+    font-size: 1.3rem;
     background:#000; 
     color:#fff;
+    scroll-behavior: smooth;
 }
 
 section{height:100%;
@@ -31,7 +33,7 @@ h1{
     color:#ea783b;
     position:absolute;
     width:100%;
-    top:100px;
+    top:25px;
 }
 
 
@@ -106,26 +108,11 @@ h2{font-weight:300;
         
          #rover{max-width:40%;
         position:absolute;
-        }
-        
-        nav{
-        position:fixed;
-            right:0;
-            top:50%;
-            height:200px;
-            margin-top:-100px;
-            opacity:.5;
-            z-index:99;
-        }
-        nav li{
-        width:10px;
-            height:10px;
-            list-style:none;
-            border:2px solid #fff;
-            border-radius:50%;
-            margin:2em;
-            cursor:pointer;
-        }
+        /* top: 50%;
+        right: 20%;
+        height: 250px; */
+        width: auto;}
+    
         .active{background:#fff;}
 
 

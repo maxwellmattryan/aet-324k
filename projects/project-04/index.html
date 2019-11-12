@@ -1,57 +1,123 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Mars Parallax</title>
-<meta name="viewport" content="width=device-width">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<link href="mars.css" rel="stylesheet"/>
-    <style>
-       
-    </style>
-</head>
-<body>
-    <section id="screen1">
-        <h1>Red Planet</h1>
-        
-        <div id="sun" class="light"></div>
-        <div id="mars"
-            data-start="margin-top: 0px"
-            data-200-start="margin-top: -100px">
-        </div>
-        <div id="shine" class="light"
-            data-start="transform: translateX(0px);"
-            data-1-start="transform: translateX(3000px);">
-        </div>
-    </section>
-    
-    
-    <section id="screen2">
-        <h2>Exploration of Mars</h2>
-        <div class="info">The exploration of Mars has taken place over hundreds of years, beginning in earnest with the invention and development of the telescope during the 1600s. Increasingly detailed views of the planet from Earth inspired speculation about its environment and possible life &mdash;even intelligent civilizations&mdash; that might be found there. Probes sent from Earth beginning in the late 20th century have yielded a dramatic increase in knowledge about the Martian system, focused primarily on understanding its geology and habitability potential.</div>
-    </section>
-    
-    
-    <section id="screen3">
-        <h2>Viking Lander</h2>
-        <div class="info">The Viking 1 lander touched down on the surface of Mars on July 20, 1976 and was joined by the Viking 2 lander on September 3. The Viking landers conducted biological experiments designed to detect life in the Martian soil, as well as measure temperature, wind, and seismology.</div>
-    </section>
-    
-    
-    <section id="screen4">
-        <h2>Mars Rovers</h2>
-        <div class="info">Launched in 2003, Opportunity landed on Mars on January 25, 2004 on the other side of Mars from its twin rover Spirit. With a planned 90-day duration of activity, Opportunity is still active, gathering data and making scientific observations, and reporting back to Earth for over 40 times its designed lifespan.</div>
-    </section>
-    
-    <script>
-        //var s = skrollr.init();
-        $("#mars").animate({top: "200px"}, 1000, shaftOfLight);
-        $("#screen h1").delay(100).animate({letterSpacing: "0.8rem"}, 1000);
+    <head>
+        <title>Mars Parallax</title>
+        <meta name="viewport" content="width=device-width">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-        function shaftOfLight() {
-            $("#shine").css({opacity: "1"});
-            $("#shine").animate({marginLeft: "-450px", width: "900px"}, 80);
+        <link href="mars.css" rel="stylesheet"/>
+        <script src="skrollr.js"></script>
+        <style>
+        nav {
+            position: fixed;
+            right: 0px;
+            top: 50%;
+            height: 200px;
+            margin-top: -100px;
+            z-index: 1;
         }
-    </script>
+        nav li {
+            list-style-type: none;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #fff;
+            border-radius: 1000px;
+            margin: 30px 20px;
+        }
 
-</body>
+        nav li:hover {
+            background-color: #fff;
+        }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li data-screen="#screen1"></li>
+                <li data-screen="#screen2"></li>
+                <li data-screen="#screen3"></li>
+                <li data-screen="#screen4"></li>
+            </ul>
+        </nav>
+        <div id="skrollr-body">
+            <section id="screen1">
+                <h1>Red Planet</h1>
+                
+                <div id="sun" class="light"></div>
+                <div id="mars"
+                    data-start="margin-top: 0px"
+                    data-200-start="margin-top: -100px">
+                </div>
+                <div id="shine" class="light"
+                    data-start="transform: translateX(0px);"
+                    data-1-start="transform: translateX(3000px);">
+                </div>
+            </section>
+            
+            
+            <section id="screen2">
+                <h2>Exploration of Mars</h2>
+                <div class="info"
+                    data-bottom-top="transform: translateY(200px);"
+                    data-top-bottom="transform: translateY(-200px);"
+                    >
+                    <img src="images/mars.png"
+                        data-bottom-top="transform: rotate(0deg);"
+                        data-top-bottom="transform: rotate(180deg);"
+                        />
+                    The exploration of Mars has taken place over hundreds of years, beginning in earnest with the invention and development of the telescope during the 1600s. Increasingly detailed views of the planet from Earth inspired speculation about its environment and possible life &mdash;even intelligent civilizations&mdash; that might be found there. Probes sent from Earth beginning in the late 20th century have yielded a dramatic increase in knowledge about the Martian system, focused primarily on understanding its geology and habitability potential.
+                </div>
+            </section>
+            
+            
+            <section id="screen3">
+                <img id="viking" src="images/viking.png"
+                    data-anchor-target="#screen3"
+                    data-500-top="bottom: 125%;"
+                    data-100-top="bottom: 60%;"
+                    data-top="bottom: 25%;"
+                    />
+                <h2>Viking Lander</h2>
+                <div class="info"
+                    data-200-top="right: -25%;"
+                    data-top="right: 0%;">The Viking 1 lander touched down on the surface of Mars on July 20, 1976 and was joined by the Viking 2 lander on September 3. The Viking landers conducted biological experiments designed to detect life in the Martian soil, as well as measure temperature, wind, and seismology.</div>
+            </section>
+            
+            
+            <section id="screen4">
+                <img id="rover" src="images/opportunity.png"
+                    data-anchor-target="#screen4"
+                    data-200-end="right[sqrt]: -30%; top[sqrt]: 35%; height: 300px;"
+                    data-end="right[sqrt]: 40%; top[sqrt]: 40%; height: 400px;"
+                >
+                <h2>Mars Rovers</h2>
+                <div class="info">Launched in 2003, Opportunity landed on Mars on January 25, 2004 on the other side of Mars from its twin rover Spirit. With a planned 90-day duration of activity, Opportunity is still active, gathering data and making scientific observations, and reporting back to Earth for over 40 times its designed lifespan.</div>
+            </section>
+        </div>
+        
+        <script>
+            // opening page animations
+            $("#mars").animate({top: "200px"}, 1000, shaftOfLight);
+            $("#screen h1").delay(100).animate({letterSpacing: "0.8rem"}, 1000);
+            
+            // handles light shine visibility
+            function shaftOfLight() {
+                $("#shine").css({opacity: "1"});
+                $("#shine").animate({marginLeft: "-450px", width: "900px"}, 80);
+            }
+
+            // make scrolling animations work
+            var s = skrollr.init();
+
+            // make side nav work
+            $("nav li").click(function() {
+                var dest = $(this).data("screen");
+                $("html body").animate({scrollTop: $(dest).offset().top()}, 2000, "easeOutCubic");
+            });
+
+        </script>
+
+    </body>
 </html>

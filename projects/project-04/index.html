@@ -27,7 +27,7 @@
             margin: 30px 20px;
         }
 
-        nav li:hover {
+        nav li:hover, .active {
             background-color: #fff;
         }
         </style>
@@ -35,7 +35,7 @@
     <body>
         <nav>
             <ul>
-                <li data-screen="#screen1"></li>
+                <li class="active" data-screen="#screen1"></li>
                 <li data-screen="#screen2"></li>
                 <li data-screen="#screen3"></li>
                 <li data-screen="#screen4"></li>
@@ -100,21 +100,31 @@
         <script>
             // opening page animations
             $("#mars").animate({top: "200px"}, 1000, shaftOfLight);
-            $("#screen h1").delay(100).animate({letterSpacing: "0.8rem"}, 1000);
+            $("#screen h1").delay(100).animate({letterSpacing: "0.8em"}, 1000);
             
             // handles light shine visibility
             function shaftOfLight() {
-                $("#shine").css({opacity: "1"});
-                $("#shine").animate({marginLeft: "-450px", width: "900px"}, 80);
+                $("#shine").css({opacity: 1});
+                $("#shine").animate({marginLeft: "-450px", width: "900px"}, 350);
             }
 
             // make scrolling animations work
             var s = skrollr.init();
 
             // make side nav work
-            $("nav li").click(function() {
+            $("nav li").click(function () {
                 var dest = $(this).data("screen");
-                $("html body").animate({scrollTop: $(dest).offset().top()}, 2000, "easeOutCubic");
+                $("html, body").animate({scrollTop: $(dest).offset().top}, 1000, "easeOutCubic");
+            });
+
+            // scroll detection if current screen goes out of view
+            $(document).scroll(function() {
+                // find active screen by dividing total scroll top distance by window height (and adding 1)
+                var activeScreen = Math.round($(document).scrollTop() / $(window).height()) + 1;
+                // remove class from current active li element
+                $("nav li").removeClass("active");
+                // via the nth-child selector, add .active to the current screen
+                $("nav li:nth-child(" + activeScreen + ")").addClass("active");
             });
 
         </script>

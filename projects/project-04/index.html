@@ -3,10 +3,11 @@
     <head>
         <title>Mars Parallax</title>
         <meta name="viewport" content="width=device-width">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="crossorigin="anonymous"></script>
+    
         <link href="mars.css" rel="stylesheet"/>
         <script src="skrollr.js"></script>
         <style>
@@ -30,6 +31,25 @@
         nav li:hover, .active {
             background-color: #fff;
         }
+        #cover {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            align-content: center;
+            background: #000;
+            text-align: center;
+            z-index: 1;
+            pointer-events: none;
+        }
+        #cover img {
+            margin-top: 42.5vh;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% {transform: rotate(45deg)}
+            100% {transform: rotate(-315deg)}
+        }
+
         </style>
     </head>
     <body>
@@ -41,6 +61,11 @@
                 <li data-screen="#screen4"></li>
             </ul>
         </nav>
+
+        <div id="cover">
+            <img src="images/loading-circle.png" alt="Loading">
+        </div>
+
         <div id="skrollr-body">
             <section id="screen1">
                 <h1>Red Planet</h1>
@@ -99,8 +124,10 @@
         
         <script>
             // opening page animations
-            $("#mars").animate({top: "200px"}, 1000, shaftOfLight);
-            $("#screen h1").delay(100).animate({letterSpacing: "0.8em"}, 1000);
+            function introAnimation() {
+                $("#mars").animate({top: "200px"}, 1000, shaftOfLight);
+                $("#screen1 h1").delay(100).animate({letterSpacing: "0.5em"}, 1000);
+            }
             
             // handles light shine visibility
             function shaftOfLight() {
@@ -114,7 +141,7 @@
             // make side nav work
             $("nav li").click(function () {
                 var dest = $(this).data("screen");
-                $("html, body").animate({scrollTop: $(dest).offset().top}, 1000, "easeOutCubic");
+                $("html, body").animate({scrollTop: $(dest).offset().top}, 1000);
             });
 
             // scroll detection if current screen goes out of view
@@ -125,6 +152,11 @@
                 $("nav li").removeClass("active");
                 // via the nth-child selector, add .active to the current screen
                 $("nav li:nth-child(" + activeScreen + ")").addClass("active");
+            });
+
+            // when window loads then fade out the loading screen
+            $(window).on("load", function() {
+                $("#cover").animate({opacity: 0}, 300, introAnimation);
             });
 
         </script>

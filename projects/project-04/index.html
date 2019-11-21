@@ -141,7 +141,7 @@
             // make side nav work
             $("nav li").click(function () {
                 var dest = $(this).data("screen");
-                $("html, body").animate({scrollTop: $(dest).offset().top}, 1000);
+                $("html, body").animate({scrollTop: $(dest).offset().top}, 1000, "easeOutCubic");
             });
 
             // scroll detection if current screen goes out of view

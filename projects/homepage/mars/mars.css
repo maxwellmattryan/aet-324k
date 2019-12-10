@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+*{margin:0; padding:0;}
+
+body, html{height:100%;
+    font-family: 'Oswald', sans-serif; 
+    font-size: 1.3rem;
+    background:#000; 
+    color:#fff;
+}
+
+section{height:100%;
+    position:relative;
+    background-size:cover;
+    overflow:hidden;
+}
+
+section, section *{box-sizing:border-box;}
+
+#screen2{background-image:url(images/mars-surface.jpg);}
+
+#screen3{background-image:url(images/mars-rocks.jpg);}
+
+#screen4{background-image:url(images/mars-mountains.jpg);}
+
+h1, h2{text-transform:uppercase; 
+    text-align:center;
+}
+
+h1{
+    font-size:3.3em;
+    color:#ea783b;
+    position:absolute;
+    width:100%;
+    top:25px;
+}
+
+
+h2{font-weight:300;
+    font-size:2.2em;
+    padding-top: 1em;
+}
+
+.light{background: radial-gradient(ellipse closest-side, rgba(252,252,252,1) 0%,rgba(252,245,179,0.81) 20%,rgba(241,218,54,0) 100%);
+}
+
+.info{
+    position:absolute;
+    width:25%;
+    padding: 5em 2em 2em 2em;
+    background: rgba(0,0,0,.5);
+    line-height:1.6em;
+    font-weight:300;
+    top:0;
+    bottom:0;
+}
+
+
+#mars{background: url(images/mars-horizon.png) center top no-repeat;
+            background-size:contain;
+            width:100%;
+            height:40%;
+            position:absolute;
+            top:50px;
+        }
+        
+        #sun, #shine{
+         position:absolute;
+            left:50%;
+        }
+        #sun{
+        width:200px; height:200px;
+            margin-left:-100px;
+            top:100px;
+        }
+        
+        #shine{width:900px;
+        height:20px;
+        top: 190px;
+        margin-left:-10px;
+        opacity:0;
+        width:20px;}
+        
+        #skrollr-body{
+         width:100%;
+            height:100%;
+            position:absolute;
+        }
+        
+        #screen2 .info{
+            width:100%;
+            top:20%;
+            bottom:20%;
+        }
+        #screen2 img{
+            float:left;
+            margin-right:3em;
+            shape-outside:circle();
+            max-width: 50%;
+        }
+        
+        #screen3 .info{right:0;}
+        
+        #viking{max-width:40%;
+        position:absolute;
+        left:15%;}
+        
+         #rover{max-width:40%;
+        position:absolute;
+        /* top: 50%;
+        right: 20%;
+        height: 250px; */
+        width: auto;}
+    
+        .active{background:#fff;}
+
+
+
+@media screen and (min-width:400px) and (max-width:800px){
+    body{ font-size:12px;}
+    #mars{height:60%;}
+    #screen2 img{
+            max-width: 30%;
+        }
+    nav{display:none;}
+}
